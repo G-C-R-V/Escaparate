@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Alvear</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<header>
+  <div class="container">
+  <div id="nav" class="flex-container">
+    <nav>  
+        <ul>
+          <img src="../../img/white.ico" alt="Logo de tu sitio web" id="logo">
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="./index.html">Casa</a></li>
+            <li><a href="../Reservas/index.html">Reservar</a></li>
+            <li><a href="../Actividades/index.html">+ Info</a></li>
+            <li id="contacto" ><a href="./Sections/Contacto/index.html">Contacto</a></li>
+        </ul>
+    </nav>
+  </div>
+</div>
+</header>
+ 
+<div class="fondo">
+<section id="galeria" class="flex-container">
+  <h2>Imagenes de la Casa</h2>
+    <div class="controls">
+    <button id="prevBtn">&lt;</button>
+      <div class="fotos-container">
+        <div class="container2">
+          <div class="fotos">
+              <img class="fotos2" src="./img/casa fuera.jpg" alt="" title="">
+              <img class="fotos2" src="./img/frente.jpg" alt="" title="">
+              <img class="fotos2" src="./img/comedor.jpg" alt="" title="">
+              <img class="fotos2" src="./img/cocina.jpg" alt="" title="">
+              <img class="fotos2" src="./img/living.jpg" alt="" title="">
+              <img class="fotos2" src="./img/cuarto 1.jpg" alt="" title="">
+              <img class="fotos2" src="./img/cuarto 2.jpg" alt="" title="">
+              <img class="fotos2" src="./img/cuarto 3.jpg" alt="" title="">
+              <img class="fotos2" src="./img/pileta.jpg" alt="" title="">
+              <img class="fotos2" src="./img/patio.jpg" alt="" title="">
+              <img class="fotos2" src="./img/patio2.jpg" alt="" title="">
+          </div>
+        </div>
+      </div>
+      <button id="nextBtn">&gt;</button>
+    </div>
+  </section>
+
+  <section class="caract">
+   <h2>Caracteristicas</h2> 
+    <div class="carac">
+    <ul> 
+        <li class="cara"><img src="./img/h4.ico" >Cocina, living y comedor</li>
+        <li class="cara"><img src="./img/bath.ico" >Baño</li>
+        <li class="cara"><img src="./img/bed.ico" >3 Habitaciones (5 camas individuales y 2 camas matrimoniales)</li>
+        <li class="cara"><img src="./img/tv.ico" >Television</li>
+        <li class="cara"><img src="./img/wifi.ico" >Wifi</li>
+      </ul>  <ul>
+      <li class="cara"><img src="./img/pile.ico" >Pileta</li>
+      <li class="cara"><img src="./img/truck.ico" >Food truck</li>
+      <li class="cara"><img src="./img/puente.ico" >Balneario a 5 min</li>
+      <li class="cara"><img src="./img/plaza.ico" >Frente a plaza del Cristo redentor</li>
+      <li class="cara"><img src="./img/lake.ico" >Termas de tapalqué a 30 min</li>
+    </ul>
+  </div>
+  </section>
+
+
+  <section id="ubi"  class="flex-container">
+    <h2>Dirección</h2>
+    <div class="maps">
+      <div class="iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d372.39628923746864!2d-60.022088550061206!3d-36.02779137011317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzbCsDAxJzQwLjAiUyA2MMKwMDEnMTguMSJX!5e1!3m2!1ses-419!2sar!4v1707267856651!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <ul id="mapList">
+        <li><p><img src="./img/h4.ico" alt=""> Aristóbulo del Valle 1536</p></li>
+      </ul>
+    </div>
+  </section>
+
+<div class="reglas">
+  <section>
+    <h2>Prohibido</h2>
+    <p>Mascotas de cualquier tipo</p>
+  </section>
+</div>
+
+
+</div>  <!--  div del fondo -->
+
+  <footer>
+    <p>&copy; Copyright by Escape Alvear</p>
+    <address>
+      <a href="mailto:me@html6.com">Contactar</a>
+    </address>
+  </footer>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const fotosContainer = document.querySelector('.fotos');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+
+        nextBtn.addEventListener('click', function () {
+            if (currentIndex < fotosContainer.children.length - 1) {
+                currentIndex++;
+                updateGallery();
+            }
+        });
+
+        prevBtn.addEventListener('click', function () {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateGallery();
+            }
+        });
+
+        function updateGallery() {
+            const photoWidth = fotosContainer.children[0].clientWidth;
+            fotosContainer.style.transform = `translateX(${-currentIndex * photoWidth}px)`;
+        }
+    });
+</script>
+
+</html>
