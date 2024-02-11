@@ -278,21 +278,21 @@ main p {
 
   /* Estilos para la sección 'maps' */
 .maps {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
   background-color: rgba(209, 70, 82, 0); /* Fondo transparente */
   max-width: 100%;
   border: 3px solid #0eda4100; /* Borde semitransparente */
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+  height: auto;
 }
+  
 
 /* Estilos para la lista dentro de 'maps' */
 .maps ul {
   list-style: none;
-  align-items: center;
   text-align: left;
-  margin-right: auto;
   margin: auto;
 }
 
@@ -327,10 +327,10 @@ main p {
 /* Estilos para el contenedor de la iframe */
 .iframe {
   display: flex;
-  justify-content: left;
   max-width: 100%;
+  height: auto;
   border: 1px solid #0000002e; /* Borde semitransparente */
-  box-shadow: 0px 5px 10px rgba(211, 208, 208, 0.5); /* Sombra */
+  box-shadow: 0px 5px 10px rgb(0, 0, 0); /* Sombra */
   -moz-border-radius: 15px; /* Bordes redondeados */
   border-radius: 5%; /* Bordes redondeados */
   overflow: hidden;

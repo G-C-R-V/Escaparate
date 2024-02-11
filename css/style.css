@@ -2,9 +2,9 @@
 
 
 html {
-  width: 100%;
-  height: 100%;
-  /* --color: rgba(114, 114, 114, 0.3);
+    width: 100%;
+    height: 100%;
+    /* --color: rgba(114, 114, 114, 0.3);
     --s: 50px; /* control the size 
     
     --g:conic-gradient(at 90% 40%,#0000 75%,#774F38 0);
@@ -19,11 +19,11 @@ html {
 }
 
 html p{
-  font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif;
 }
 
 html h2{
-  font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif;
 }
 /* Estilos generales para el cuerpo del documento */
 body {
@@ -33,9 +33,9 @@ body {
 }
 
 /* Estilos para la clase 'pagina' */
-.pagina {
+/* .pagina {
 
-}
+} */
 
 /* Estilos para los títulos de nivel 1 */
 h1 {
@@ -71,8 +71,8 @@ header {
     max-width: 100%;
     margin: auto;
     }
-  
-  #nav ul li a{
+
+#nav ul li a{
     flex: auto;
     padding: 10px;
     background-color: rgba(235, 228, 228, 0.021); 
@@ -209,7 +209,7 @@ main h2 {
     justify-content: left;
     max-width: 100%;
     border: 1px solid #0000002e; /* Borde semitransparente */
-    box-shadow: 0px 5px 10px rgba(211, 208, 208, 0.5); /* Sombra */
+    box-shadow: 0px 5px 10px rgb(0, 0, 0); /* Sombra */
     -moz-border-radius: 15px; /* Bordes redondeados */
     border-radius: 5%; /* Bordes redondeados */
     overflow: hidden;
@@ -238,12 +238,12 @@ main h2 {
 /* Estilos para las imágenes dentro de 'resumen' */
 #resumen img {
     max-width: 100%;
-    width: 1200px;
+    width: 50%;
     height: auto;
     padding: 1rem;
-    -moz-border-radius: 15px; /* Bordes redondeados */
-    border-radius: 8% 8%; /* Bordes redondeados */
+    border-radius: 10%; /* Bordes redondeados */
     overflow: hidden;
+    display: flex;
 }
 
 /* Estilos para la sección 'caja' */
@@ -385,11 +385,11 @@ footer p {
     width: 100%;
     height: 100%;
     --color: rgba(114, 114, 114, 0.3);
-      --s: 50px; /* control the size */
-      
-      --g:conic-gradient(at 90% 90%,#0000 75%,#3e7528 0);
-      background: var(--g),var(--g) var(--s) var(--s) #a2b45a;
-      background-size: calc(2*var(--s)) calc(2*var(--s));
+    --s: 50px; /* control the size */
+    
+    --g:conic-gradient(at 90% 90%,#0000 75%,#3e7528 0);
+    background: var(--g),var(--g) var(--s) var(--s) #a2b45a;
+    background-size: calc(2*var(--s)) calc(2*var(--s));
 }
 
 .fondo {
@@ -399,4 +399,4 @@ footer p {
     margin: 1rem;
     box-shadow: 0 5px 10px rgba(25, 24, 24, 0.94);
     padding: 2rem;
-  }
+}
